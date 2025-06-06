@@ -2,204 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PWHL Fantasy League Hub – 2025–26</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWHL Fantasy Hockey League</title>
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f4f6f9;
+      background-color: #f7f9fc;
+      color: #1a1a1a;
     }
 
     header {
-      background-color: #152f52;
-      color: white;
+      background-color: #14213d;
+      color: #ffffff;
+      padding: 20px;
       text-align: center;
-      padding: 1.5em 1em;
     }
 
-    section {
-      max-width: 1000px;
-      margin: 2em auto;
+    h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    nav.stats-nav {
+      background-color: #f0f0f0;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .dropdown {
+      display: inline-block;
+      position: relative;
+    }
+
+    .dropbtn {
+      background-color: #2e3b4e;
+      color: white;
+      padding: 10px 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover {
+      background-color: #1c2735;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
       background-color: white;
-      padding: 1.5em;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #2e3b4e;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .stats-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 1em;
+      margin-top: 20px;
     }
 
     th, td {
-      border: 1px solid #ddd;
-      padding: 0.75em;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
       text-align: left;
     }
 
     th {
-      background-color: #e6eef8;
+      background-color: #e0e0e0;
     }
 
-    img.team-logo {
-      width: 30px;
-      height: 30px;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
-
-    img.player-photo {
-      width: 40px;
+    .player-photo {
       height: 40px;
-      border-radius: 50%;
+      width: auto;
+      margin-right: 10px;
       vertical-align: middle;
-      margin-right: 8px;
     }
 
     footer {
       text-align: center;
-      font-size: 0.9em;
-      padding: 2em 1em;
-      background-color: #eaecef;
+      padding: 20px;
+      background-color: #14213d;
+      color: white;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #0077cc;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>🏒 PWHL Fantasy League Hub</h1>
-    <p>2025–26 Season</p>
+    <h1>PWHL Fantasy Hockey League</h1>
   </header>
 
-  <section>
-    <h2>📊 Player Stats (Auto-updated)</h2>
+  <nav class="stats-nav">
+    <div class="dropdown">
+      <button class="dropbtn">Stats ▾</button>
+      <div class="dropdown-content">
+        <a href="skater-stats.html">2024–25 Skater Stats</a>
+        <a href="goalie-stats.html">2024–25 Goalie Stats</a>
+      </div>
+    </div>
+  </nav>
 
-    <h3>Top Skaters</h3>
-    <table id="skater-stats">
+  <section class="stats-section">
+    <h2>Player Stats</h2>
+    <table>
       <thead>
         <tr>
           <th>Player</th>
           <th>Team</th>
-          <th>GP</th>
-          <th>G</th>
-          <th>A</th>
-          <th>PTS</th>
+          <th>Goals</th>
+          <th>Assists</th>
+          <th>Points</th>
         </tr>
       </thead>
       <tbody>
-        <!-- Filled dynamically -->
-      </tbody>
-    </table>
-
-    <h3>Top Goalies</h3>
-    <table id="goalie-stats">
-      <thead>
         <tr>
-          <th>Goalie</th>
-          <th>Team</th>
-          <th>GP</th>
-          <th>W</th>
-          <th>GAA</th>
-          <th>SV%</th>
+          <td>
+            <img class="player-photo" src="https://assets.thepwhl.com/players/205_headshot.png" alt="Sarah Fillier">
+            Sarah Fillier
+          </td>
+          <td>Toronto</td>
+          <td>12</td>
+          <td>18</td>
+          <td>30</td>
         </tr>
-      </thead>
-      <tbody>
-        <!-- Filled dynamically -->
+        <tr>
+          <td>
+            <img class="player-photo" src="https://assets.thepwhl.com/players/102_headshot.png" alt="Marie-Philip Poulin">
+            Marie-Philip Poulin
+          </td>
+          <td>Montreal</td>
+          <td>15</td>
+          <td>20</td>
+          <td>35</td>
+        </tr>
+        <!-- Add more players here -->
       </tbody>
     </table>
   </section>
 
   <footer>
-  <p>This site is a fan project. Official info: <a href='https://www.thepwhl.com/' target='_blank'>PWHL</a></p>
+    <p>This site is a fan project. Official info: <a href="https://www.thepwhl.com/" target="_blank">PWHL</a></p>
   </footer>
-
-  <script>
-    // Example mock data (simulate pulling from live API)
-    const skaters = [
-      {
-        name: "Hilary Knight",
-        team: "Seattle",
-        teamLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Seattle_Kraken_official_logo.svg/50px-Seattle_Kraken_official_logo.svg.png",
-        playerPhoto: "https://a.espncdn.com/i/headshots/hockey/players/full/1234567.png",
-        gp: 24,
-        g: 15,
-        a: 14,
-        pts: 29
-      },
-      {
-        name: "Sarah Fillier",
-        team: "New York Sirens",
-        teamLogo: "https://upload.wikimedia.org/wikipedia/en/4/4f/New_York_Rangers_logo.svg",
-        playerPhoto: "https://a.espncdn.com/i/headshots/hockey/players/full/2345678.png",
-        gp: 24,
-        g: 13,
-        a: 12,
-        pts: 25
-      }
-    ];
-
-    const goalies = [
-      {
-        name: "Kristen Campbell",
-        team: "Toronto",
-        teamLogo: "https://upload.wikimedia.org/wikipedia/en/3/3a/Toronto_Maple_Leafs_logo.svg",
-        playerPhoto: "https://a.espncdn.com/i/headshots/hockey/players/full/3456789.png",
-        gp: 22,
-        w: 16,
-        gaa: 1.99,
-        sv: ".927"
-      },
-      {
-        name: "Nicole Hensley",
-        team: "Minnesota",
-        teamLogo: "https://upload.wikimedia.org/wikipedia/en/5/5a/Minnesota_Wild.svg",
-        playerPhoto: "https://a.espncdn.com/i/headshots/hockey/players/full/4567890.png",
-        gp: 14,
-        w: 7,
-        gaa: 2.19,
-        sv: ".919"
-      }
-    ];
-
-    function populateTable(data, tableId, isSkater) {
-      const tbody = document.querySelector(`# tbody`);
-      tbody.innerHTML = "";
-
-      data.forEach(player => {
-        const tr = document.createElement("tr");
-
-        const nameCell = document.createElement("td");
-        nameCell.innerHTML = `
-          <img class="player-photo" src="" alt="" />
-          
-        `;
-
-        const teamCell = document.createElement("td");
-        teamCell.innerHTML = `
-          <img class="team-logo" src="" alt="" />
-          
-        `;
-
-        tr.appendChild(nameCell);
-        tr.appendChild(teamCell);
-
-        if (isSkater) {
-          tr.innerHTML += `<td></td><td></td><td></td><td></td>`;
-        } else {
-          tr.innerHTML += `<td></td><td></td><td></td><td></td>`;
-        }
-
-        tbody.appendChild(tr);
-      });
-    }
-
-    // Simulate fetching and populating
-    document.addEventListener("DOMContentLoaded", () => {
-      populateTable(skaters, "skater-stats", true);
-      populateTable(goalies, "goalie-stats", false);
-    });
-  </script>
 </body>
 </html>
